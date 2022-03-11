@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* webshop_public_prices
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-11 13:50+0000\n"
+"PO-Revision-Date: 2022-03-11 13:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.products_item_addtocart
+msgid "<i class=\"fa fa-shopping-cart mr-2\"/>ADD TO CART"
+msgstr "<i class=\"fa fa-shopping-cart mr-2\"/>TOEVOEGEN AAN WINKELMANDJE"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.products_item_addtocart
+msgid "<i class=\"fa fa-user-circle align-middle\"/> Login to see price"
+msgstr "<i class=\"fa fa-user-circle align-middle\"/> Login om prijzen te zien"
+
+#. module: webshop_public_prices
+#: model:ir.model,name:webshop_public_prices.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie instellingen"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.res_config_settings_view_form_hide_prices
+msgid "Hide Prices/Add to Cart for Public Users"
+msgstr "Verberg prijzen/toevoegen aan winkelmandje voor publieke gebruikers"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.res_config_settings_view_form_hide_prices
+msgid "Hide Prices/Add to Cart for public users"
+msgstr "Verberg prijzen/toevoegen aan winkelmandje voor publieke gebruikers"
+
+#. module: webshop_public_prices
+#: model:ir.model.fields,field_description:webshop_public_prices.field_res_config_settings__webshop_hide_prices
+#: model:ir.model.fields,field_description:webshop_public_prices.field_website__webshop_hide_prices
+msgid "Hide prices/Add to Cart for public users"
+msgstr "Verberg prijzen/toevoegen aan winkelmandje voor publieke gebruikers"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.shop_cart_inherit
+msgid "Login to See Prices"
+msgstr "Login om prijzen te bekijken"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.shop_cart_inherit
+msgid "Login to see prices"
+msgstr "Login om prijzen te bekijken"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.shop_cart_inherit
+msgid "Shopping cart"
+msgstr "Winkelmandje"
+
+#. module: webshop_public_prices
+#: model_terms:ir.ui.view,arch_db:webshop_public_prices.res_config_settings_view_form_hide_prices
+msgid "Turn on the option to Hide Prices/Add to Cart for public users."
+msgstr "Optie inschakelen om prijzen en toevoegen aan winkelmandje te verbergen."
+
+#. module: webshop_public_prices
+#: model:ir.model,name:webshop_public_prices.model_website
+msgid "Website"
+msgstr "Website"

@@ -84,7 +84,7 @@
 				</t>
 				<t t-else="">
 					<a role="button" class="btn btn-primary btn-lg my-1 mr-1 px-5 font-weight-bold flex-grow-1"
-					   href="/web/login"><i class="fa fa-user-circle align-middle"></i> Login to See Price</a>
+					   href="/web/login"><i class="fa fa-user-circle align-middle"></i> Login to see price</a>
 				</t>
 			</t>
 			<t t-else="">
