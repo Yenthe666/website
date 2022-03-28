@@ -17,4 +17,5 @@
 		'views/website_sale_template.xml',
 	],
 	'installable': True,
+	'license': 'LGPL-3',
 }
