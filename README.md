@@ -1,6 +1,7 @@
 # Website
 Apps related to Odoo it's website/webshop features:
-- [webshop_public_prices](#webshop_public_prices): allow configuring to hide or show product prices and add to cart button for public users
+- [webshop_public_prices](#webshop_public_prices): allow configuring to hide or show product prices and add to cart button for public users.
+- [website_featured_products](#website_featured_products): allow to define which products should be featured when using the "Products" snippet.
 
 
 ## webshop_public_prices
@@ -16,3 +17,12 @@ When this configuration option is checked on we change the following things for 
 - Hide the sales price on the /shop/product-xyz page
 - Hide the 'Add to Cart' button on the /shop/product-xyz page and show a 'Login to see Price' button
 ![image](https://user-images.githubusercontent.com/6352350/157880066-7382e001-592d-4b04-ba40-27f6d0df8dc0.png)
+
+
+## website_featured_products
+Adds support to configure which products should be shown on the website.
+This is configurable by checking the option "Featured Products" on or off on the product form:
+![image](https://user-images.githubusercontent.com/6352350/165242952-f67b7520-b440-4cc5-a4d2-3d6c0fec154c.png)
+
+The option "Featured Products" is configurable once you've dragged the building block onto the website:
+![image](https://user-images.githubusercontent.com/6352350/165243133-5c499e96-2c57-4706-8344-628ab570e359.png)
