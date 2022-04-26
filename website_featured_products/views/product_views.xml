@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="featured_product_product_normal_website_form_view" model="ir.ui.view">
+        <field name="name">product.template.view.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='public_categ_ids']" position="after">
+                <field name="show_in_featured_products" widget="boolean_toggle"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

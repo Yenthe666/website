@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="dynamic_snippet_show_featured_products_action" model="ir.filters">
+            <field name="name">Featured Products</field>
+            <field name="model_id">product.product</field>
+            <field name="user_id" eval="False" />
+            <field name="domain">[('website_published', '=', True),('show_in_featured_products','=',True)]</field>
+            <field name="context">{'display_default_code': False, 'add2cart_rerender': False}</field>
+            <field name="sort">['create_date desc']</field>
+            <field name="action_id" ref="website.action_website"/>
+        </record>
+
+        <record id="dynamic_filter_show_featured_products" model="website.snippet.filter">
+            <field name="filter_id" ref="website_featured_products.dynamic_snippet_show_featured_products_action"/>
+            <field name="field_names">display_name,description_sale,image_512,price:monetary</field>
+            <field name="limit" eval="16"/>
+            <field name="name">Featured Products</field>
+        </record>
+    </data>
+</odoo>
