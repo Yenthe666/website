@@ -1,4 +1,4 @@
-from odoo import api, fields, models, _
+from odoo import fields, models, _
 
 
 class AssignAlias(models.TransientModel):
@@ -24,6 +24,3 @@ class AssignAlias(models.TransientModel):
                     each_product.product_alias_ids = [(4, each_alias.id)]
         elif self.action == "replace":
             products_ids.product_alias_ids = [(6, 0, self.assign_product_alias_ids.ids)]
-
-
-

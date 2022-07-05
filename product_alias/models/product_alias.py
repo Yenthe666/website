@@ -1,9 +1,10 @@
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ProductAlias(models.Model):
     _name = "product.alias"
     _description = "Product Alias"
+    _order = 'id DESC'
 
     name = fields.Char(
         string='Name',
@@ -24,10 +25,11 @@ class ProductAlias(models.Model):
     def action_view_products(self):
         self.ensure_one()
         action = self.env["ir.actions.actions"]._for_xml_id("sale.product_template_action")
-        product_template_ids = self.env["product.template"].search([("product_alias_ids", "=", self.id)])
-        action['domain'] = [('id', 'in', product_template_ids.ids)]
+        product_template_ids = self.env["product.template"].search_read([("product_alias_ids", "=", self.id)], ['id'])
+        action['domain'] = [('id', 'in', [product_template['id'] for product_template in product_template_ids])]
         return action
 
     _sql_constraints = [
-        ('name_uniq', 'unique (name)', "There's already an alias with this name. You cannot create two aliases with the same name."),
+        ('name_uniq', 'unique (name)', "There's already an alias with this name."
+                                       "You cannot create two aliases with the same name.")
     ]
