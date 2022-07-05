@@ -30,68 +30,68 @@ msgstr ""
 #: model:ir.model.fields.selection,name:product_alias.selection__assign_alias__action__add
 #, python-format
 msgid "Add Aliases"
-msgstr ""
+msgstr "Synoniem toevoegen"
 
 #. module: product_alias
 #: model_terms:ir.ui.view,arch_db:product_alias.product_template_form_view
-msgid "Alias"
-msgstr ""
+msgid "Aliases"
+msgstr "Synoniemen"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_product_product__product_alias_string
 #: model:ir.model.fields,field_description:product_alias.field_product_template__product_alias_string
 msgid "Alias String"
-msgstr ""
+msgstr "Synoniem string"
 
 #. module: product_alias
 #: model:ir.model.constraint,message:product_alias.constraint_product_alias_name_uniq
 msgid "Alias name already exists !"
-msgstr ""
+msgstr "Synoniem bestaat reeds!"
 
 #. module: product_alias
 #: model_terms:ir.ui.view,arch_db:product_alias.view_product_alias_form
 msgid "Archived"
-msgstr ""
+msgstr "Gearchiveerd"
 
 #. module: product_alias
 #: model_terms:ir.ui.view,arch_db:product_alias.assign_product_alias_form
 msgid "Assign"
-msgstr ""
+msgstr "Toewijzen"
 
 #. module: product_alias
 #: model:ir.actions.act_window,name:product_alias.product_product_assign_alias_action
 #: model:ir.actions.act_window,name:product_alias.product_template_assign_alias_action
 #: model_terms:ir.ui.view,arch_db:product_alias.assign_product_alias_form
 msgid "Assign Aliases"
-msgstr ""
+msgstr "Synoniemen toewijzen"
 
 #. module: product_alias
 #: model:ir.model,name:product_alias.model_assign_alias
 msgid "Assign Product Alias"
-msgstr ""
+msgstr "Productsynoniem toewijzen"
 
 #. module: product_alias
 #: model_terms:ir.ui.view,arch_db:product_alias.assign_product_alias_form
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleer"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__create_uid
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Aangemaakt door"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__create_date
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Aangemaakt op"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__display_name
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Schermnaam"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__id
@@ -103,24 +103,24 @@ msgstr ""
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias____last_update
 #: model:ir.model.fields,field_description:product_alias.field_product_alias____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Laatst gewijzigd op"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__write_uid
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Laatst bijgewerkt door"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__write_date
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Laatst bijgewerkt op"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__name
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #. module: product_alias
 #: model:ir.model,name:product_alias.model_product_product
@@ -133,19 +133,19 @@ msgstr ""
 #: model:ir.ui.menu,name:product_alias.menu_product_alias
 #: model_terms:ir.ui.view,arch_db:product_alias.view_product_alias_form
 #: model_terms:ir.ui.view,arch_db:product_alias.view_product_alias_tree
-msgid "Product Alias"
-msgstr ""
+msgid "Product Aliases"
+msgstr "Product synoniemen"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_product_product__product_alias_ids
 #: model:ir.model.fields,field_description:product_alias.field_product_template__product_alias_ids
 msgid "Product Aliases"
-msgstr ""
+msgstr "Product synoniemen"
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_product_alias__product_count
 msgid "Product Count"
-msgstr ""
+msgstr "Aantal producten"
 
 #. module: product_alias
 #: model:ir.model,name:product_alias.model_product_template
@@ -155,29 +155,30 @@ msgstr "Productsjabloon"
 #. module: product_alias
 #: model_terms:ir.ui.view,arch_db:product_alias.view_product_alias_form
 msgid "Products"
-msgstr ""
+msgstr "Producten"
 
 #. module: product_alias
 #: code:addons/product_alias/wizards/assign_product_alias.py:0
 #: model:ir.model.fields.selection,name:product_alias.selection__assign_alias__action__replace
 #, python-format
 msgid "Replace Aliases with selected ones"
-msgstr ""
+msgstr "Vervang synoniemen met geselecteerde synoniemen"
 
 #. module: product_alias
 #: model:ir.model.fields,help:product_alias.field_assign_alias__action
 msgid ""
 "Select 'Add Aliases' if you want to add aliases to the existing Aliases. \n"
 "Select 'Replace' if you want to Replace all aliases with selected ones."
-msgstr ""
+msgstr "Selecteer 'Synoniem toevoegen' indien u synoniemen wilt toevoegen aan de bestaande synoniemen. \n"
+"Selecteer 'Vervang synoniemen met geselecteerde synoniemen' indien u alle synoniemen wilt vervangen door de geselecteerde synoniemen."
 
 #. module: product_alias
 #: model:ir.model.fields,field_description:product_alias.field_assign_alias__assign_product_alias_ids
 msgid "Select Aliases"
-msgstr ""
+msgstr "Selecteer synoniemen"
 
 #. module: product_alias
 #: model:ir.model.fields,help:product_alias.field_product_product__product_alias_string
 #: model:ir.model.fields,help:product_alias.field_product_template__product_alias_string
 msgid "Technical field used for searching purposes."
-msgstr ""
+msgstr "Technisch veld gebruikt door de zoekfunctionaliteiten"
