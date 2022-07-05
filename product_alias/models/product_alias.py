@@ -29,5 +29,5 @@ class ProductAlias(models.Model):
         return action
 
     _sql_constraints = [
-        ('name_uniq', 'unique (name)', "Alias name already exists !"),
+        ('name_uniq', 'unique (name)', "There's already an alias with this name. You cannot create two aliases with the same name."),
     ]
