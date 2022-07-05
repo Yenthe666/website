@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//page[last()]" position="after">
-                <page string="Alias">
+                <page name="product_aliasses" string="Alias">
                     <field name="product_alias_ids"/>
                 </page>
             </xpath>
