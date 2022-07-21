@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_website_form_inherit_website_sale_order_configuration" model="ir.ui.view">
+        <field name="name">website.form.inherit.website.sale.order.configuration</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="website_sale_configuration" string="Sales configuration">
+                    <group name="website_sale_configuration">
+                        <group name="mail_templates" string="Mail templates">
+                            <field name="order_confirmation_mail_template_id"/>
+                            <field name="invoice_mail_template_id"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
