@@ -14,6 +14,6 @@ A second configuration can be enabled to also send out the invoice via mail dire
 
 ## website_sale_order_configuration
 Enables you to configure which email templates to use for webshop orders and their invoices.
-The configuration can be made in per website in the website configuration.
+The configuration can be made per website in the website configuration.
 
 ![image](https://user-images.githubusercontent.com/17778757/180216243-be70f471-42d6-4716-a69d-92d18a385b3d.png)
