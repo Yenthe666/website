@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_website_form_inherit_auto_invoice_webshop_orders" model="ir.ui.view">
+        <field name="name">website.form.inherit.auto.invoice.webshop.orders</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website_sale_order_configuration.view_website_form_inherit_website_sale_order_configuration"/>
+        <field name="arch" type="xml">
+            <group name="website_sale_configuration" position="inside">
+                <group name="invoicing" string="Invoicing">
+                    <field name="auto_invoice_webshop_order"/>
+                    <field name="auto_send_invoice_webshop_order"
+                           attrs="{'invisible': [('auto_invoice_webshop_order', '=', False)]}"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* auto_invoice_webshop_orders
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-21 10:15+0000\n"
+"PO-Revision-Date: 2022-07-21 10:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_sale_order__auto_invoice_webshop_order
+msgid "Automatically invoice paid order"
+msgstr "Automatisch betaalde order factureren"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_website__auto_invoice_webshop_order
+msgid "Automatically invoice paid orders"
+msgstr "Automatisch betaalde orders factureren"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_sale_order__auto_send_invoice_webshop_order
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_website__auto_send_invoice_webshop_order
+msgid "Automatically send invoices"
+msgstr "Automatisch facturen versturen"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_sale_order__display_name
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_website__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_sale_order__id
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: auto_invoice_webshop_orders
+#: code:addons/auto_invoice_webshop_orders/models/website.py:0
+#: model:ir.model.fields,help:auto_invoice_webshop_orders.field_sale_order__auto_send_invoice_webshop_order
+#: model:ir.model.fields,help:auto_invoice_webshop_orders.field_website__auto_send_invoice_webshop_order
+#, python-format
+msgid ""
+"Invoices for webshop orders will be confirmed and sent to the customer "
+"automatically."
+msgstr ""
+"Facturen voor webshop orders zullen automatisch bevestigd worden en verstuurd naar de klant."
+
+#. module: auto_invoice_webshop_orders
+#: model_terms:ir.ui.view,arch_db:auto_invoice_webshop_orders.view_website_form_inherit_auto_invoice_webshop_orders
+msgid "Invoicing"
+msgstr "Facturatie"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_sale_order____last_update
+#: model:ir.model.fields,field_description:auto_invoice_webshop_orders.field_website____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model,name:auto_invoice_webshop_orders.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: auto_invoice_webshop_orders
+#: code:addons/auto_invoice_webshop_orders/models/website.py:0
+#: model:ir.model.fields,help:auto_invoice_webshop_orders.field_sale_order__auto_invoice_webshop_order
+#: model:ir.model.fields,help:auto_invoice_webshop_orders.field_website__auto_invoice_webshop_order
+#, python-format
+msgid ""
+"Webshop orders will be automatically invoiced when they are paid "
+"immediately."
+msgstr ""
+"Webshop orders zullen automatisch gefactureerd worden wanneer betaald."
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.actions.server,name:auto_invoice_webshop_orders.cron_auto_invoice_webshop_orders_ir_actions_server
+#: model:ir.cron,cron_name:auto_invoice_webshop_orders.cron_auto_invoice_webshop_orders
+#: model:ir.cron,name:auto_invoice_webshop_orders.cron_auto_invoice_webshop_orders
+msgid "Webshop: automatically invoice and send orders"
+msgstr "Webshop: automatisch factureren en versturen van orders"
+
+#. module: auto_invoice_webshop_orders
+#: model:ir.model,name:auto_invoice_webshop_orders.model_website
+msgid "Website"
+msgstr ""
