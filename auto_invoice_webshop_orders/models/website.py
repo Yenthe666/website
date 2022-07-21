@@ -7,12 +7,12 @@ class Website(models.Model):
 
     auto_invoice_webshop_order = fields.Boolean(
         string='Automatically invoice paid orders',
-        help=_('Webshop orders will be automatically invoiced when they are paid immediately.')
+        help='Webshop orders will be automatically invoiced when they are paid immediately.'
     )
 
     auto_send_invoice_webshop_order = fields.Boolean(
         string='Automatically send invoices',
-        help=_('Invoices for webshop orders will be confirmed and sent to the customer automatically.')
+        help='Invoices for webshop orders will be confirmed and sent to the customer automatically.'
     )
 
     @api.onchange('auto_invoice_webshop_order')
