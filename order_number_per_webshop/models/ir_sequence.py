@@ -6,7 +6,7 @@ class IrSequence(models.Model):
 
     def next_by_code(self, sequence_code, sequence_date=None):
         """
-        Check if a certain sequence is present in de context and use that one if set.
+        Check if a certain sequence is present in the context and use that one if set.
         """
         sequence = self.env.context.get("sequence_id", False)
         if sequence:
