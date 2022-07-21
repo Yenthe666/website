@@ -17,3 +17,8 @@ Enables you to configure which email templates to use for webshop orders and the
 The configuration can be made per website in the website configuration.
 
 ![image](https://user-images.githubusercontent.com/17778757/180216243-be70f471-42d6-4716-a69d-92d18a385b3d.png)
+
+## order_number_per_webshop
+This module makes it possible to have a different order numbering for each website.
+
+![image](https://user-images.githubusercontent.com/17778757/180254382-35f97201-6e13-416c-a7bf-803fd0fd0b0d.png)
