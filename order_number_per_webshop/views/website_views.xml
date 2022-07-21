@@ -1,0 +1,14 @@
+<odoo>
+    <record id="view_website_form_inherit_order_number_per_webshop" model="ir.ui.view">
+        <field name="name">website.form.inherit.auto.invoice.webshop.orders</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website_sale_order_configuration.view_website_form_inherit_website_sale_order_configuration"/>
+        <field name="arch" type="xml">
+            <group name="website_sale_configuration" position="inside">
+                <group name="order_sequence" string="Order sequence">
+                    <field name="sequence_id"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>
