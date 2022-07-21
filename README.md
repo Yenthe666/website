@@ -4,6 +4,8 @@ Apps related to Odoo it's website/webshop features:
 automatically invoice webshop orders
 - [website_sale_order_configuration](#website_sale_order_configuration):
 configure mail templates for sale orders and invoices per webshop
+- [order_number_per_webshop](#order_number_per_webshop):
+configure order sequences per webshop
 
 ## auto_invoice_webshop_orders
 Adds support to configure if the webshop orders should be automatically invoiced.
@@ -17,3 +19,8 @@ Enables you to configure which email templates to use for webshop orders and the
 The configuration can be made per website in the website configuration.
 
 ![image](https://user-images.githubusercontent.com/17778757/180216243-be70f471-42d6-4716-a69d-92d18a385b3d.png)
+
+## order_number_per_webshop
+This module makes it possible to have a different order numbering for each website.
+
+![image](https://user-images.githubusercontent.com/17778757/180254382-35f97201-6e13-416c-a7bf-803fd0fd0b0d.png)
