@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-22 14:41+0000\n"
-"PO-Revision-Date: 2022-07-22 14:41+0000\n"
+"POT-Creation-Date: 2022-07-22 15:12+0000\n"
+"PO-Revision-Date: 2022-07-22 15:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: webshop_quick_sell_product_accessory
-#: model_terms:ir.ui.view,arch_db:webshop_quick_sell_product_accessory.optional_products
+#: model_terms:ir.ui.view,arch_db:webshop_quick_sell_product_accessory.optional_products_sell_accessory
 msgid "<strong>Add to Cart</strong>"
 msgstr "<strong>Toevoegen aan winkelmandje</strong>"
 
 #. module: webshop_quick_sell_product_accessory
-#: model_terms:ir.ui.view,arch_db:webshop_quick_sell_product_accessory.optional_products
+#: model_terms:ir.ui.view,arch_db:webshop_quick_sell_product_accessory.optional_products_sell_accessory
 msgid "Suggested Accessories:"
 msgstr "Productaccessoires:"
