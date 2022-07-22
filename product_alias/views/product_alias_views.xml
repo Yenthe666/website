@@ -1,0 +1,47 @@
+<odoo>
+
+    <record id="view_product_alias_form" model="ir.ui.view">
+        <field name="name">product.alias.form</field>
+        <field name="model">product.alias</field>
+        <field name="arch" type="xml">
+            <form string="Product Alias">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_products" type="object" class="oe_stat_button" icon="fa-bars"
+                            context="{'default_product_alias_ids': [(6, 0, [active_id])]}" >
+                            <field name="product_count" widget="statinfo" string="Products"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <group name="main_group">
+                        <field name="name"/>
+                        <field name="active" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="view_product_alias_tree" model="ir.ui.view">
+        <field name="name">product.alias.tree</field>
+        <field name="model">product.alias</field>
+        <field name="arch" type="xml">
+            <tree string="Product Alias">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_alias_action" model="ir.actions.act_window">
+            <field name="name">Product Alias</field>
+            <field name="res_model">product.alias</field>
+            <field name="view_mode">tree,form</field>
+     </record>
+
+    <menuitem id="menu_product_alias"
+              name="Product Aliases"
+              sequence="1"
+              parent="sale.menu_sale_config"
+              action="product_alias_action"/>
+
+</odoo>

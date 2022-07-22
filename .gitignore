@@ -1,0 +1,6 @@
+.idea/*
+.idea/
+.vscode
+# compiled python files
+*.py[co]
+__pycache__/
