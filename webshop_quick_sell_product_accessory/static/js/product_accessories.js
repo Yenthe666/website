@@ -1,4 +1,4 @@
-odoo.define("website_shop_product_accessory.website_shop_product_accessory", function (require) {
+odoo.define("webshop_quick_sell_product_accessory.website_shop_product_accessory", function (require) {
     'use strict';
     var sAnimations = require('website.content.snippets.animation');
     var wSaleUtils = require('website_sale.utils');

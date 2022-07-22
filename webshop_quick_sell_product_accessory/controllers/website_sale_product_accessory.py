@@ -5,7 +5,7 @@ from odoo.addons.website_sale.controllers.main import WebsiteSale
 
 class WebsiteSaleProductAccessory(WebsiteSale):
     def _prepare_product_values(self, product, category, search, **kwargs):
-        values =  super(WebsiteSaleProductAccessory, self)._prepare_product_values(product, category, search, **kwargs)
+        values = super(WebsiteSaleProductAccessory, self)._prepare_product_values(product, category, search, **kwargs)
 
         # Add order to the product values
         order = request.website.sale_get_order()
@@ -26,4 +26,6 @@ class WebsiteSaleProductAccessory(WebsiteSale):
     )
     def get_order_details(self):
         order = request.website.sale_get_order(force_create=True)
-        return {'product_ids': order.order_line.product_id.ids}
+        return {
+            'product_ids': order.order_line.product_id.ids
+        }

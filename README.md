@@ -2,7 +2,7 @@
 Apps related to Odoo it's website/webshop features:
 - [webshop_public_prices](#webshop_public_prices): allow configuring to hide or show product prices and add to cart button for public users.
 - [website_featured_products](#website_featured_products): allow to define which products should be featured when using the "Products" snippet.
-
+- [website_shop_product_accessory](#website_shop_product_accessory): allow to quick add accessories to the basket from the product (in the webshop)
 
 ## webshop_public_prices
 Adds support to configure if the sale price and the 'Add to cart' button is shown on products in the shop or not.<br/>
@@ -26,3 +26,12 @@ This is configurable by checking the option "Featured Products" on or off on the
 
 The option "Featured Products" is configurable once you've dragged the building block onto the website:
 ![image](https://user-images.githubusercontent.com/6352350/165243133-5c499e96-2c57-4706-8344-628ab570e359.png)
+
+## website_shop_product_accessory
+Adds support for customers to quick add product accessories to the basket from the product form:
+Simply install this app and for any product that has accessory products configured on the product they will be
+automatically shown/selectable in the shop.
+Here's what happens when the customer clicks on the "Add to cart" of the suggested accessory:
+- If the product itself is already in the basket we only add the accessory,<br/
+- If the product and the accessory are not in the basket we add one of each,<br/>
+- If the accessory is already in the basket we no longer show it
