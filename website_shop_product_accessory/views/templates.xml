@@ -1,74 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <template id="optional_products" inherit_id="website_sale.product" customize_show="True" name="Show Optional Products">
-        <xpath expr="//div[@id='product_full_description']" position="after">
-            <t t-set="optional_products" t-value="product.optional_product_ids"/>
-            <div class="container mt32" t-if="optional_products">
-                <table class="table table-striped table-sm">
-                    <thead>
-                        <tr>
-                            <th colspan="5">
-                                Available Options:
-                            </th>
-                        </tr>
-                    </thead>
+        <xpath expr="//div[@id='product_details']/.." position="inside">
+            <div class="col-md-10 col-lg-8 product-accessories-selector">
+                <t t-set="suggested_products" t-value="product.accessory_product_ids.filtered(lambda a: a not in website_sale_order.order_line.product_id)"/>
+                <span hidden="hidden" id="total_suggested_products" t-esc="len(suggested_products)"/>
+                <h5 class='text-muted' t-if="suggested_products">Suggested Accessories:</h5>
+                <table t-if="suggested_products" id="suggested_products" class="table table-striped table-sm">
                     <tbody>
-                        <t t-foreach="product.optional_product_ids" t-as="product">
-                            <t t-set="combination" t-value="product._get_first_possible_combination(parent_combination)"/>
-                            <t t-if="product._is_add_to_cart_possible(parent_combination)">
-
-                                <t t-set="combination_info" t-value="product._get_combination_info(combination, add_qty=add_qty or 1, pricelist=pricelist)"/>
-                                <t t-set="product_variant" t-value="product.env['product.product'].browse(combination_info['product_id'])"/>
-
-                                <tr class="js_product">
-                                    <td class="td-img">
-                                        <input type="hidden" class="product_template_id" t-att-value="product.id"/>
-                                        <input type="hidden" class="product_id" t-attf-name="optional-product-#{product.id}" t-att-value="product_variant.id"/>
-                                        <img t-if="product_variant" t-att-src="'/web/image/product.product/%s/image_128' % product_variant.id"  class="variant_image" alt="Product Image"/>
-                                        <img t-else="" t-att-src="'/web/image/product.template/%s/image_128' % product.id"  class="variant_image" alt="Product Image"/>
-                                    </td>
-                                    <td class='td-product_name' style="vertical-align: middle;" colspan="2">
-                                        <div class="mb-3">
-                                            <strong class="product-name product_display_name" t-esc="combination_info['display_name']"/>
-                                            <div class="text-muted small" t-field="product.description_sale"/>
-                                        </div>
-                                        <t t-call="sale.variants">
-                                            <t t-set="combination" t-value="product._get_first_possible_combination(parent_combination)"/>
-                                        </t>
-                                    </td>
-                                    <td class="text-center td-qty d-none" style="vertical-align: middle;">
-                                        <t t-call='sale_product_configurator.product_quantity_config' />
-                                    </td>
-                                    <td class="text-center td-price" style="vertical-align: middle;">
-                                        <div t-attf-class="text-danger oe_default_price oe_optional oe_striked_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}"
-                                            t-esc="combination_info['list_price']"
-                                            t-options='{
-                                                "widget": "monetary",
-                                                "display_currency": (pricelist or product).currency_id
-                                            }'/>
-                                        <div class="oe_price" style="white-space: nowrap;"
-                                            t-esc="combination_info['price']"
-                                            t-options='{
-                                                "widget": "monetary",
-                                                "display_currency": (pricelist or product).currency_id
-                                            }'/>
-                                    </td>
-                                    <td class="text-center" style="vertical-align: middle;">
-                                        <span class="js_raw_price d-none" t-esc="combination_info['price']" />
-                                        <p class="css_not_available_msg alert alert-warning">Option not available</p>
-
-                                        <a role="button" href="#" class="js_add_optional btn btn-primary btn-sm"><i class="fa fa-shopping-cart add-optionnal-item"></i> Add to cart</a>
-                                        <span class="js_remove d-none">
-                                            <a role="button" href="#" class="js_remove"><i class="fa fa-trash-o remove-optionnal-item"></i></a>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </t>
-                        </t>
+                        <tr t-foreach="suggested_products" t-as="suggested_product" t-att-data-publish="suggested_product.website_published and 'on' or 'off'"
+                            class="suggested_product">
+                            <t t-set="combination_info" t-value="suggested_product._get_combination_info_variant(pricelist=website_sale_order.pricelist_id or None)"/>
+                            <td class='td-img text-center'>
+                                <a t-att-href="suggested_product.website_url">
+                                    <span t-field="suggested_product.image_128"
+                                          t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_64_max'}"/>
+                                </a>
+                            </td>
+                            <td class='td-product_name'>
+                                <div>
+                                    <a t-att-href="suggested_product.website_url">
+                                        <strong t-esc="combination_info['display_name']"/>
+                                    </a>
+                                </div>
+                                <div class="text-muted d-none d-md-block" t-field="suggested_product.description_sale"/>
+                            </td>
+                            <td class='td-price'>
+                                <del t-attf-class="text-danger mr8 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;"
+                                     t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                <span t-esc="combination_info['price']" style="white-space: nowrap;"
+                                      t-options="{'widget': 'monetary','display_currency': website.currency_id}"/>
+                            </td>
+                            <td class="w-25 text-center">
+                                <input name="product_id" t-att-data-product-id="suggested_product.id" type="hidden"/>
+                                <a role="button" class="btn btn-link product_add_suggested_product">
+                                    <strong>Add to Cart</strong>
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </xpath>
     </template>
-
 </odoo>

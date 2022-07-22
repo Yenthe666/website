@@ -8,14 +8,15 @@
 	'summary': 'Website Sale Product Accessory',
 	'description': """Website Sale Product Accessory""",
 	'depends': [
-		'sale_product_configurator',
+		'sale_product_configurator', 'website_sale',
 	],
 	'data': [
 		'views/templates.xml',
 	],
 	'assets': {
 		'web.assets_frontend': [
-			'website_shop_product_accessory/static/js/optional_product.js'
+			'website_shop_product_accessory/static/css/product_accessories.scss',
+			'website_shop_product_accessory/static/js/product_accessories.js',
 		],
 	},
 	'license': 'LGPL-3',
