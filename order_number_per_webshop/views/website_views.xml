@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <group name="website_sale_configuration" position="inside">
                 <group name="order_sequence" string="Order sequence">
-                    <field name="sequence_id"/>
+                    <field name="sequence_id"  context="{'default_company_id': False}"/>
                 </group>
             </group>
         </field>
