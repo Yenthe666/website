@@ -9,13 +9,13 @@ class SaleOrder(models.Model):
     auto_invoice_webshop_order = fields.Boolean(
         string='Automatically invoice paid order',
         related='website_id.auto_invoice_webshop_order',
-        stored=True
+        store=True
     )
 
     auto_send_invoice_webshop_order = fields.Boolean(
         string='Automatically send invoices',
         related='website_id.auto_send_invoice_webshop_order',
-        stored=True
+        store=True
     )
 
     def cron_auto_invoice_webshop_orders(self):
