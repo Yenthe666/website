@@ -1,7 +1,7 @@
 {
 	'name': 'Webshop Public Prices',
 	'category': 'Website',
-	'version': '15.0.1.1',
+	'version': '15.0.1.2',
 	'author': 'Mainframe Monkey',
 	'website': 'https://www.mainframemonkey.com',
 	'summary': 'Webshop Public Prices',
