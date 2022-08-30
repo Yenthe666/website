@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<template id="product_hide_extra_price" inherit_id="sale.badge_extra_price">
-			<!--
-				Only show variant prices when the user is logged in, the view is rendered in the backend and
-				when the hide prices option is checked on
-				This expression is a reversed logic to be clear.
-			-->
-			<t t-if="website and not website.webshop_hide_prices or website and not request.env.user._is_public() or not website">
-				<span t-esc="abs(combination_info_variant['price_extra'])"
-					  class="variant_price_extra text-muted font-italic" style="white-space: nowrap;"
-					  t-options='{"widget": "monetary", "display_currency": (pricelist or product).currency_id}'/>
-			</t>
+		<xpath expr="//span" position="replace">
+			<t t-set="combination_info_variant" t-value="product._get_combination_info(ptav, pricelist=pricelist)"/>
+			<span class="badge badge-pill badge-light border" t-if="combination_info_variant['price_extra']">
+				<span class="sign_badge_price_extra"
+					  t-esc="combination_info_variant['price_extra'] > 0 and '+' or '-'"/>
+				<!--
+                    Only show variant prices when the user is logged in, the view is rendered in the backend and
+                    when the hide prices option is checked on
+                    This expression is a reversed logic to be clear.
+                -->
+				<t t-if="website and not website.webshop_hide_prices or website and not request.env.user._is_public() or not website">
+					<span t-esc="abs(combination_info_variant['price_extra'])"
+						  class="variant_price_extra text-muted font-italic" style="white-space: nowrap;"
+						  t-options='{"widget": "monetary", "display_currency": (pricelist or product).currency_id}'/>
+				</t>
+			</span>
+		</xpath>
 	</template>
 
 	<template id="product_hide_public_price" inherit_id="website_sale.product_price">
