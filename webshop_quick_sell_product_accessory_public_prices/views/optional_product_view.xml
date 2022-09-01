@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="optional_products_sell_accessory_inherit_public_prices"
+              inherit_id="webshop_quick_sell_product_accessory.optional_products_sell_accessory">
+        <xpath expr="//td[@class='td-price']/del" position="attributes">
+            <attribute name="t-if">website and not website.webshop_hide_prices or website and not request.env.user._is_public() or not website</attribute>
+        </xpath>
+        <xpath expr="//td[@class='td-price']/span" position="attributes">
+            <attribute name="t-if">website and not website.webshop_hide_prices or website and not request.env.user._is_public() or not website</attribute>
+        </xpath>
+        <xpath expr="//a[hasclass('product_add_suggested_product')]" position="attributes">
+            <attribute name="t-if">website and not website.webshop_hide_prices or website and not request.env.user._is_public() or not website</attribute>
+        </xpath>
+    </template>
+</odoo>
