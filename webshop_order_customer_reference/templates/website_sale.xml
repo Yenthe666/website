@@ -1,0 +1,18 @@
+<odoo>
+    <template id="payment_inherit_webshop_order_customer_reference" inherit_id="website_sale.payment">
+        <xpath expr="//div[@id='address_on_payment']" position="before">
+            <form action="/shop/order/customer_reference"
+                  method="post" name="customer_reference">
+                <b>Extra info / reference:</b>
+                <div class="input-group w-100">
+                    <input name="client_order_ref" class="form-control" type="text" t-att-value="order.client_order_ref"
+                           placeholder="Insert your own reference here..."/>
+                    <div class="input-group-append">
+                        <a href="#" role="button" class="btn btn-secondary a-submit">Add</a>
+                    </div>
+                </div>
+                <br/>
+            </form>
+        </xpath>
+    </template>
+</odoo>
