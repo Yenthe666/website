@@ -3,6 +3,7 @@
         <xpath expr="//div[@id='address_on_payment']" position="before">
             <form action="/shop/order/customer_reference"
                   method="post" name="customer_reference">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                 <b>Extra info / reference:</b>
                 <div class="input-group w-100">
                     <input name="client_order_ref" class="form-control" type="text" t-att-value="order.client_order_ref"
