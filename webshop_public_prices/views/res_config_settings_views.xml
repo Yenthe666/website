@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="res_config_settings_view_form_hide_prices" model="ir.ui.view">
+		<field name="name">res.config.settings.webshop.hide.prices</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="website.res_config_settings_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[@id='website_info_settings']" position="after">
+				<h2>Hide Prices/Add to Cart for Public Users</h2>
+				<div class="row mt16 o_settings_container" id="website_public_price_setting">
+					<div class="col-12 col-lg-6 o_setting_box" id="webshop_hide_price">
+						<div class="o_setting_left_pane">
+							<field name="webshop_hide_prices" string="Hide Prices/Add to Cart for public users"/>
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="webshop_hide_prices" string="Hide Prices/Add to Cart for public users"/>
+							<div class="text-muted">
+								Turn on the option to Hide Prices/Add to Cart for public users.
+							</div>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>
