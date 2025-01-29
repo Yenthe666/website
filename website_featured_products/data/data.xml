@@ -13,7 +13,7 @@
 
         <record id="dynamic_filter_show_featured_products" model="website.snippet.filter">
             <field name="filter_id" ref="website_featured_products.dynamic_snippet_show_featured_products_action"/>
-            <field name="field_names">display_name,description_sale,image_512,price:monetary</field>
+            <field name="field_names">display_name,description_sale,image_512</field>
             <field name="limit" eval="16"/>
             <field name="name">Featured Products</field>
         </record>
